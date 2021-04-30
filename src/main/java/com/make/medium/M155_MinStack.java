@@ -33,13 +33,11 @@ public class M155_MinStack {
     }
 
     public int top() {
-        stack2.peekFirst();
-        return stack1.peekFirst();
+        return stack1.peek();
     }
 
     public int getMin() {
-        Integer m = stack2.peek();
-        return m == null ? -1 : m;
+        return stack2.peek();
     }
 
 }
