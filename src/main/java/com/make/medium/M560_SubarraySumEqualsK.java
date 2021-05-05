@@ -22,4 +22,11 @@ public class M560_SubarraySumEqualsK {
         return count;
     }
 
+    public static void main(String[] args) {
+        int[] a = new int[] {1, 1, 1};
+        M560_SubarraySumEqualsK abc = new M560_SubarraySumEqualsK();
+        System.out.println(abc.subarraySum(a, 3));
+
+    }
+
 }
