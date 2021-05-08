@@ -26,4 +26,9 @@ public class H72_EditDistance {
         return dp[len1][len2];
     }
 
+    public static void main(String[] args) {
+        H72_EditDistance solution = new H72_EditDistance();
+        System.out.println(solution.minDistance("abc", "a"));
+    }
+
 }
