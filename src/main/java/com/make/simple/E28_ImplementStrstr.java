@@ -7,6 +7,7 @@ package com.make.simple;
 public class E28_ImplementStrstr {
 
     public int strStr(String haystack, String needle) {
+
         int n = haystack.length(), m = needle.length();
         if (m == 0) {
             return 0;
