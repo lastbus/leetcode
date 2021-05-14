@@ -24,7 +24,7 @@ public class PreorderTraversal {
         while (node != null || !stack.isEmpty()) {
             while (node != null) {
                 System.out.println(node.val + " ");
-                if (node != null) stack.push(node);
+                stack.push(node);
                 node = node.left;
             }
             if (!stack.isEmpty()) {
