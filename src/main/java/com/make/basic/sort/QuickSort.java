@@ -1,5 +1,7 @@
 package com.make.basic.sort;
 
+import java.util.Arrays;
+
 /**
  * @author make
  * @create 2021-05-15
@@ -31,12 +33,13 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] a = {1,6,1,2,7,9,3,4,5,10,8, 8,8,8,8,1,1,1,1,2,2,2,2};
+        int[] a = {1,2,3};
 
         sort(a);
         for (int i : a) {
             System.out.println(i);
         }
+        Arrays.copyOf()
     }
 
 }
