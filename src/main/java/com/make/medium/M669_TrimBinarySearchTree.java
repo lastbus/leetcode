@@ -6,19 +6,14 @@ package com.make.medium;
  */
 public class M669_TrimBinarySearchTree {
 
-    public TreeNode trimBST(TreeNode root, int low, int high) {
-        if (root == null) return null;
-        TreeNode left = trimBST(root.left, low, high);
-        TreeNode right = trimBST(root.right, low, high);
-        if (root.val < low) {
-            return right;
-        } else if (root.val > high) {
-            return left;
-        } else {
-            root.left = left;
-            root.right = right;
-            return root;
-        }
+    public TreeNode trimBST(TreeNode root, int left, int right) {
+        if (root == null) return root;
+        if (root.val > right) return trimBST(root.left, left, right);
+        if (root.val < left) return trimBST(root.right, left, right);
+
+        root.left = trimBST(root.left, left, right);
+        root.right = trimBST(root.right, left, right);
+        return root;
     }
 
 }
