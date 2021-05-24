@@ -33,4 +33,45 @@ public class M5_LongestPalindromicSubstring {
         return true;
     }
 
+    public String longestPalindrome2(String s) {
+        int maxLength = 1;
+        int start = 0;
+
+        char[] array = s.toCharArray();
+        int n = array.length;
+        boolean[][] dp = new boolean[n][n];
+        for (int i = 0; i < n; i++) {
+            dp[i][i] = true;
+        }
+
+        for (int L = 2; L <= n; L++) {
+            for (int i = 0; i < n; i++) {
+                // L = j - i + 1
+                int j = L + i - 1;
+                if (j >= n) break;
+                if (array[i] != array[j]) {
+                    dp[i][j] = false;
+                } else {
+                    if (j - i < 3) {
+                        dp[i][j] = true;
+                    } else {
+                        dp[i][j] = dp[i + 1][j - 1];
+                    }
+                }
+                if (dp[i][j] && L > maxLength) {
+                    maxLength = j - i + 1;
+                    start = i;
+                }
+            }
+
+        }
+
+        return s.substring(start, start + maxLength);
+    }
+
+    public static void main(String[] args) {
+        String s = "aaaa";
+        M5_LongestPalindromicSubstring m5 = new M5_LongestPalindromicSubstring();
+        System.out.println(m5.longestPalindrome2(s));
+    }
 }
