@@ -7,7 +7,7 @@ package com.make.medium;
 public class M19_RemoveNthNodeFromEndOfList {
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode dummy = new ListNode(0, head);
+        ListNode dummy = new ListNode();
         ListNode first = head;
         ListNode second = dummy;
         for (int i = 0; i < n; ++i) {
