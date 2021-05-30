@@ -11,6 +11,7 @@ public class E35_SearchInsertPosition {
         int left = 0, right = n - 1, ans = n;
         while (left <= right) {
             int mid = (right + left) >> 1;
+            if (target == nums[mid]) return mid;
             if (target <= nums[mid]) {
                 ans = mid;
                 right = mid - 1;
