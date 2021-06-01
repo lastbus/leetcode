@@ -15,4 +15,10 @@ public class E53_MaximumSubarray {
         return maxAns;
     }
 
+    public static void main(String[] args) {
+        int i = 0;
+        int j = 100;
+        System.out.println();
+    }
+
 }
