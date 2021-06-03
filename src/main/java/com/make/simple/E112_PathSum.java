@@ -38,4 +38,21 @@ public class E112_PathSum {
         return false;
     }
 
+
+    /**
+     * 递归，faster
+     * @param root
+     * @param targetSum
+     * @return
+     */
+    public boolean hasPathSum2(TreeNode root, int targetSum) {
+        if (root == null) {
+            return false;
+        }
+        if (root.left == null && root.right == null) {
+            return targetSum == root.val;
+        }
+        return hasPathSum(root.left, targetSum - root.val) || hasPathSum(root.right, targetSum - root.val);
+    }
+
 }
