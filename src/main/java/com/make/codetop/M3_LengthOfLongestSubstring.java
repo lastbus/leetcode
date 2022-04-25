@@ -7,7 +7,7 @@ import java.util.Set;
  * @author make
  * @create 2022-04-25
  */
-public class M3LengthOfLongestSubstring {
+public class M3_LengthOfLongestSubstring {
 
 
     public int lengthOfLongestSubstring_1(String s) {
